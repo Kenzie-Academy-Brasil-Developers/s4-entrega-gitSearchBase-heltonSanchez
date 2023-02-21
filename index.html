@@ -1,9 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./src/styles/reset.css">
+    <link rel="stylesheet" href="./src/styles/globalStyles.css">
+    <link rel="stylesheet" href="./src/styles/index.css">
+
+    <link rel="shortcut icon" href="./src/assets/img/faviconkenzie.webp" type="image/x-icon">
 
     <!-- FONTES -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,6 +22,17 @@
     <title>Git Search</title>
   </head>
   <body>
+
+    <div class="backgroundPink">
+      <h1>Git Search</h1>
+      <p>Encontre e se conecte com profissionais de forma rápida e fácil.</p>
+    </div>
+    <div>
+      <h2>Procurar por um usuário</h2>
+      <label for="searchUser">Usuário github</label>
+      <input type="search" name="searchUser" id="searchUser" placeholder="Digite um usuário do github aqui...">
+      <button type="submit" id="buttonSearch">Ver perfil do github</button>
+    </div>
 
     <script type="module" src="./src/scripts/index.js"></script>
   </body>

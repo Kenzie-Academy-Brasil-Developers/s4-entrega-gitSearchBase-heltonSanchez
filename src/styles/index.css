@@ -1,0 +1,89 @@
+body {
+    background: var(--color-grey-2);
+    color: var(--color-grey-7);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+div {
+    height: 100%;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+
+}
+
+.backgroundPink {
+    background: var(--color-brand-1);
+}
+
+h1 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 150%;
+    margin-left: 3rem;
+}
+
+p {
+    margin-left: 3rem;
+    width: 70%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+}
+
+h2 {
+    margin-left: 10rem;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+}
+
+label {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    margin-left: 10rem;
+}
+
+input {
+    margin-left: 10rem;
+    background: var(--color-grey-1);
+    color: var(--color-grey-7);
+    width: 300px;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 4px;
+}
+
+button {
+    color: var(--color-grey-7);
+    margin-left: 10rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 40px;
+    gap: 10px;
+    background:var(--color-brand-1);
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover{
+    background:var(--color-brand-2);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.858);
+}

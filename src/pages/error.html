@@ -1,9 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/globalStyles.css">
+    <link rel="stylesheet" href="../styles/error.css">
+
+    <link rel="shortcut icon" href="./src/assets/img/faviconkenzie.webp" type="image/x-icon">
 
     <!-- FONTES -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,7 +22,17 @@
     <title>Git Search - User Not Found</title>
   </head>
   <body>
+    <section>
+    <h1>Ooops!</h1>
+    <p>Não encotramos o usuário que você procurou, <span>vamos tentar novamente</span>.</p>
+    <a href="/">Nova Busca</a>
+    </section>
+  
+    <div class="pinkBox"><img src="../assets/img/!.png" alt="Alert"></div>
+    <div class="purpleBox"></div>
+
 
     <script type="module" src="../scripts/error.js"></script>
+
   </body>
 </html>

@@ -1,0 +1,33 @@
+body {
+    background: var(--color-grey-2);
+    color: var(--color-grey-7);
+}
+main{
+    width: 70%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section{
+    position: relative;
+    display: flex;
+}
+section>div{
+    display: flex;
+}
+section>a{
+    box-sizing: border-box;
+    color: var(--color-grey-7);
+    position: absolute;
+    width: 169px;
+    height: 38px;
+    right: 90px;
+    top: 82px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
