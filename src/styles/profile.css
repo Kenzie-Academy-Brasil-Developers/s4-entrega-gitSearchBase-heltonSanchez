@@ -5,7 +5,10 @@ body {
 main{
     width: 70%;
     max-width: 1200px;
-    margin: 0 auto;
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    position: relative;
 }
 
 section{
@@ -30,4 +33,72 @@ section>a{
     align-items: center;
     justify-content: center;
     text-decoration: none;
+}
+
+.container__user{
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.container__user>img{
+    width: 100px;
+    border-radius: 100%;
+    border: solid var(--color-brand-1);
+}
+.container__user>h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.repositoryList{
+    position: absolute;
+    top: 250px;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+.repositoryList>li{
+    position: relative;
+    width: 380px;
+    height: 230px;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: solid var(--color-grey-4);
+    border-radius: 8px;
+}
+.repositoryList>li:hover{
+    border-color: var(--color-grey-6);
+}
+.repositoryList>li>h3{
+    margin-left: 10%;
+    margin-top: 10%;
+    color: var(--color-grey-7);
+    font-size: 1.25rem;
+
+}
+.repositoryList>li>p{
+    margin-left: 10%;
+    color: var(--color-grey-7);
+    font-size: 0.875rem;
+    width: 80%;
+}
+.repositoryList>li>a{
+    margin-left: 10%;
+    color: var(--color-grey-7);
+    text-decoration: none;
+    background: var(--color-brand-1);
+    padding: 10px;
+    border-radius: 8px;
+    position: absolute;
+    top: 150px;
+    left: 1rem;
+
 }

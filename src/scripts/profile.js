@@ -1,42 +1,49 @@
-import { getGitHubUser } from "./request.js"
 
-function showUser (user){
+const userGitHub = JSON.parse(localStorage.getItem("@gitSeach:UserName"))
 
-    const perfil = document.querySelector('.container__user')
+async function showGitHubUser () {
 
-    const avatar = document.createElement('img')
-    const name = document.createElement('h2')
 
-    avatar.src = user.avatar_url
-    name.innerText = user.name
+    const profile = document.querySelector('.container__user')
 
-    perfil.append(avatar, name)
+    const imgUser = document.createElement('img')
+    const nameUser = document.createElement('h2')
+
+    imgUser.src = userGitHub.avatar_url
+    nameUser.innerText = userGitHub.name
+
+    profile.append(imgUser, nameUser)
+
 }
 
-async function cardRepository (user) {
-      
-    const listRepository = document.querySelector('.repositoryList')
+async function requestRepository(element){
 
-    const card = document.createElement('li')
-    const project = document.createElement('h3')
-    const description = document.createElement('p')
-    const linkRepository = document.createElement('a')
+    const getRepository = await fetch(`https://api.github.com/users/${element}/repos`)
+    const repository = await getRepository.json()
 
-    a.innerText = 'Repositório'
-    a.href = user.repos_url
+    repository.forEach(element => {
+        console.log(element.html_url)
+        const profileRepository = document.querySelector('.repositoryList')
+    
+        const boxRepository = document.createElement('li')
+        const name = document.createElement('h3')
+        const description = document.createElement('p')
+        const link = document.createElement('a')
+    
+        name.innerText = element.name
+    
+        description.innerText = element.description
+    
+        link.href = element.html_url
+        link.innerText = "Repositório"
+    
+        profileRepository.appendChild(boxRepository)
+        boxRepository.append(name, description, link)
+    });
 
-    listRepository.appendChild(card)
-    card.append(project, description, linkRepository)
+
 }
 
-export function searchUser () {
-    const inputSearch = document.querySelector('#searchUser')
-    const buttonSearch = document.querySelector('#buttonSearch')
 
-    buttonSearch.addEventListener('click', async () => {
-        const searchPerfil = await getGitHubUser(inputSearch.value)
-    })
-}
-
-
-showUser()
+showGitHubUser()
+requestRepository(userGitHub.login)
